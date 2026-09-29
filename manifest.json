@@ -1,0 +1,16 @@
+{
+  "name": "Control Gastos Ra",
+  "short_name": "Gastos Ra",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#fff0f6",
+  "theme_color": "#d94f83",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "icons/ra.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ]
+}

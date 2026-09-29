@@ -1,0 +1,237 @@
+```html
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mi Control Financiero</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" href="icons/ra.png">
+<meta name="theme-color" content="#d94f83">
+</head>
+
+<body>
+
+    <div class="app">
+
+        <h1>🎀 Mi Control Financiero 💕</h1>
+
+        <p>Controla tus gastos, ingresos y ahorros.</p>
+
+
+        <!-- =========================
+             RESUMEN
+        ========================== -->
+
+        <div class="resumen">
+
+            <div class="tarjeta">
+                <h3>Dinero disponible</h3>
+                <p id="dineroDisponible">RD$ 0.00</p>
+            </div>
+
+            <div class="tarjeta">
+                <h3>Gastos</h3>
+                <p id="totalGastos">RD$ 0.00</p>
+            </div>
+
+        </div>
+
+
+        <!-- =========================
+             BOTONES PRINCIPALES
+        ========================== -->
+
+        <div class="botones">
+
+            <button onclick="mostrarIngreso()">
+                ➕ Agregar ingreso
+            </button>
+
+            <button onclick="mostrarGasto()">
+                ➖ Registrar gasto
+            </button>
+
+            <button onclick="mostrarAhorros()">
+                💰 Mis ahorros
+            </button>
+
+            <button onclick="mostrarHistorial()">
+                📊 Ver historial
+            </button>
+
+        </div>
+
+
+        <!-- =========================
+             FORMULARIO INGRESO
+        ========================== -->
+
+        <div id="formularioIngreso" class="formulario">
+
+            <h2>➕ Agregar ingreso</h2>
+
+            <input
+                type="number"
+                id="montoIngreso"
+                placeholder="Escribe el monto"
+            >
+
+            <button onclick="guardarIngreso()">
+                💕 Guardar ingreso
+            </button>
+
+        </div>
+
+
+        <!-- =========================
+             FORMULARIO GASTO
+        ========================== -->
+
+        <div id="formularioGasto" class="formulario">
+
+            <h2>➖ Registrar gasto</h2>
+
+            <input
+                type="number"
+                id="montoGasto"
+                placeholder="Escribe el monto"
+            >
+
+            <select id="categoriaGasto">
+
+                <option value="">
+                    Selecciona una categoría
+                </option>
+
+                <option value="Alimentación">
+                    🍔 Alimentación
+                </option>
+
+                <option value="Transporte">
+                    🚗 Transporte
+                </option>
+
+                <option value="Estudios">
+                    🎓 Estudios
+                </option>
+
+                <option value="Casa">
+                    🏠 Casa
+                </option>
+
+                <option value="Compras">
+                    🛍️ Compras
+                </option>
+
+                <option value="Entretenimiento">
+                    🎉 Entretenimiento
+                </option>
+
+                <option value="Otros">
+                    💳 Otros
+                </option>
+
+            </select>
+
+            <button onclick="guardarGasto()">
+                💕 Guardar gasto
+            </button>
+
+        </div>
+
+
+        <!-- =========================
+             AHORROS
+        ========================== -->
+
+        <div id="seccionAhorros" class="formulario">
+
+            <h2>🎀 Mis ahorros</h2>
+
+            <input
+                type="text"
+                id="nombreMeta"
+                placeholder="Nombre de tu meta"
+            >
+
+            <input
+                type="number"
+                id="metaAhorro"
+                placeholder="¿Cuánto quieres ahorrar?"
+            >
+
+            <input
+                type="number"
+                id="ahorroActual"
+                placeholder="¿Cuánto tienes ahorrado?"
+            >
+
+            <button onclick="guardarMeta()">
+                💕 Guardar meta
+            </button>
+
+
+            <div id="resultadoAhorro"></div>
+
+
+            <!-- AGREGAR DINERO A LOS AHORROS -->
+
+            <div class="agregar-ahorro">
+
+                <h3>💗 Agregar dinero a mis ahorros</h3>
+
+                <p>
+                    ¿Cuánto quieres guardar?
+                </p>
+
+                <input
+                    type="number"
+                    id="cantidadAhorro"
+                    placeholder="Ej. 500"
+                >
+
+                <button onclick="confirmarAhorro()">
+                    💰 Agregar dinero
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- =========================
+             HISTORIAL
+        ========================== -->
+
+        <div id="seccionHistorial" class="historial">
+
+            <h2>📊 Historial de movimientos</h2>
+
+            <div id="listaGastos">
+
+                <p>
+                    No hay movimientos registrados.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
+```
